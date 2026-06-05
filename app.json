@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Pehchaan",
+    "slug": "Pehchaan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F172A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.parthivbtech.pehchaan",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Pehchaan needs camera access for facial recognition and liveness detection.",
+        "NSPhotoLibraryUsageDescription": "Pehchaan needs photo library access to enroll face images.",
+        "NSLocationWhenInUseUsageDescription": "Pehchaan captures your GPS coordinates at the time of attendance check-in.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.parthivbtech.pehchaan",
+      "adaptiveIcon": {
+        "backgroundColor": "#0F172A",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "react-native-fast-tflite",
+      "expo-sqlite",
+      "expo-dev-client",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Pehchaan captures your GPS coordinates at the time of attendance check-in."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5312d14b-3254-4f20-8edc-8adca14cab17"
+      }
+    },
+    "owner": "parthiv-btech"
+  }
+}
